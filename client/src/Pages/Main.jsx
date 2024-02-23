@@ -20,7 +20,6 @@ const Main = () => {
         if(!response.ok){
             throw new Error('Failed')
         }
-
         return response.text();
            
         } catch (error) {
@@ -95,7 +94,7 @@ const Main = () => {
             throw new Error('Upload failed');
           }
           alert('Image uploaded successfully!');
-          displayResponse();
+          await displayResponse();
          
         } catch (error) {
           console.error('Error uploading image:', error);
